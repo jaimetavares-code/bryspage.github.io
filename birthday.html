@@ -31,13 +31,19 @@
     <button> <a href="index.html"> Go Back</a></button><br>
     <img src="img/derp.jpg" width="200px" height="200px">
 
-        <!-- Loader: set data-media="video" or data-media="gif" and provide data-src -->
-<div id="page-loader" data-media="gif" data-src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.icegif.com%2Fwp-content%2Fuploads%2F2023%2F09%2Ficegif-516.gif&f=1&nofb=1&ipt=715883bf0280428d784b0d40a38561038017fdfbb950d56040bd683e330f8fcb" data-gif-duration="3000" aria-hidden="true">
-    <div class="loader-inner" role="status" aria-label="Loading">
-        <!-- media element will be injected here by script.js -->
-
+    <!-- Popup Modal -->
+    <div id="popupModal">
+        <button class="close-btn" onclick="closePopup()">&times;</button>
+        <div id="modalContent"></div>
     </div>
-</div>
+
+    <!-- Loader: set data-media="video" or data-media="gif" and provide data-src -->
+    <div id="page-loader" data-media="gif" data-src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.icegif.com%2Fwp-content%2Fuploads%2F2023%2F09%2Ficegif-516.gif&f=1&nofb=1&ipt=715883bf0280428d784b0d40a38561038017fdfbb950d56040bd683e330f8fcb" data-gif-duration="3000" aria-hidden="true">
+        <div class="loader-inner" role="status" aria-label="Loading">
+            <!-- media element will be injected here by script.js -->
+
+        </div>
+    </div>
 
 </body>
 </html>

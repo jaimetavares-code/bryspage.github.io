@@ -143,3 +143,38 @@ function applyRandomCursor() {
 // Hook the "Randomize Cursor" button
 const cursorButton = document.getElementById("cursorBtn");
 if (cursorButton) cursorButton.addEventListener("click", applyRandomCursor);
+
+// ======================
+// POPUP FUNCTION
+// ======================
+
+function openPopup(type) {
+    const modal = document.getElementById('popupModal');
+    const modalContent = document.getElementById('modalContent');
+    
+    if (type === 'image') {
+        modalContent.innerHTML = '<img src="img/cake.webp" style="max-width: 100%; max-height: 80vh;">';
+    } else if (type === 'video') {
+        modalContent.innerHTML = '<video controls autoplay style="max-width: 100%; max-height: 80vh;"><source src="vid/rko.mp4" type="video/mp4">Your browser does not support the video tag.</video>';
+    } else if (type === 'text') {
+        modalContent.innerHTML = '<p style="word-wrap: break-word; white-space: pre-wrap; color: black; padding: 20px; max-height: 80vh; overflow-y: auto;">You. Me. Gas station. What are we getting for dinner? Sushi of course. Uh oh! There was a roofie in our gas station sushi. We black out and wake up in a sewer surrounded by fish. Horny fish. You know what that means. Fish orgy. The stench draws in a bear. What do we do? We\'re gonna fight it. Bear fight. Bare handed. Bare, naked? Oh, yes please. We befriend the bear after we beat it in a brawl and ride it into a Chuck E. Cheese. Dance Dance Revolution. Revolution? Overthrow the government? Uh, I think so. Next thing you know, I\'m reincarnated as Jesus Christ. Then I turn into a jet, fly into the sun, black out again, wake up, do a bump, white out, which I didn\'t even know you could do. Then I smoked a joint, greened out. Then I turn into the sun. Uh oh! Looks like the meth is kicking in. aklfhaofhasfahfakh AAAAAAAAA afahfioahflkf AAAAA</p>';
+    } else if (type === 'meme') {
+        window.location.href = 'https://www.google.com/search?client=firefox-b-d&hs=Ap&sca_esv=d7a88be7d6242215&sxsrf=ANbL-n7hTuyqtdSLOb7x0y3BL2NvtguxIw:1773311969437&udm=2&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpaEWjvZ2Py1XXV8d8KvlI3vxYI1tojT_24H7Q4iMwclSqIfnTP5J_a1_YHnhrZjiiTJD_2pug00kYgkdnJCgVeWKMtN3ZYjU-fsD1M3d2Dmx5u48V5sGy6qK2CDGNRJSr_g3Ly8SEZUYaAfN5KlOZfCQHCeGUbjQAGtFkwtOWlsXfajxZ&q=randy+orton+memes&sa=X&ved=2ahUKEwjAl47wlZqTAxV__rsIHZF7BhkQtKgLegQIFBAB&biw=1865&bih=996&dpr=1';
+        return;
+    }
+    
+    modal.style.display = 'flex';
+}
+
+function closePopup() {
+    const modal = document.getElementById('popupModal');
+    modal.style.display = 'none';
+}
+
+// Close modal when clicking outside of it
+window.addEventListener('click', (event) => {
+    const modal = document.getElementById('popupModal');
+    if (event.target === modal) {
+        closePopup();
+    }
+});
