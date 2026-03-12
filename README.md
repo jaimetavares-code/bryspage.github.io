@@ -1,2 +1,2 @@
-# yaunaspage.github.io
- Webpage for a friend :D
+# bryspage.github.io
+ Webpage for crush >-<
